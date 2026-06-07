@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Andrei Toma | Server Resume</title>
+    <meta
+      name="description"
+      content="Andrei Toma - Hospitality professional and server with U.S. resort experience."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+
+  <body>
+    <div class="page-bg"></div>
+
+    <nav id="desktop-nav" class="glass-nav">
+      <div class="logo">Andrei Toma</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <nav id="hamburger-nav" class="glass-nav">
+      <div class="logo">Andrei Toma</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section id="profile" class="hero-section">
+        <div class="hero-card">
+          <div class="profile-image-wrap">
+            <img src="./assets/me.jpeg" alt="Andrei Toma profile picture" />
+          </div>
+
+          <div class="hero-content">
+            <p class="eyebrow">Hospitality Resume</p>
+            <h1>Andrei Toma</h1>
+            <p class="hero-subtitle">Server | Guest Experience | Resort Hospitality</p>
+            <p class="hero-description">
+              Customer-focused hospitality professional with U.S. resort experience at
+              The Otesaga Resort Hotel, seeking a Server position where reliability,
+              teamwork, and excellent guest service matter.
+            </p>
+
+            <div class="hero-badges">
+              <span>3 Seasons in U.S. Hospitality</span>
+              <span>English B2</span>
+              <span>Server Experience</span>
+            </div>
+
+            <div class="btn-container">
+              <a class="btn btn-color-1" href="#contact">Contact Me</a>
+              <button class="btn btn-color-2" onclick="window.print()">Print Resume</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-strip">
+          <div>
+            <strong>2024–2026</strong>
+            <span>U.S. Resort Experience</span>
+          </div>
+          <div>
+            <strong>Server</strong>
+            <span>Target Position</span>
+          </div>
+          <div>
+            <strong>Suceava, RO</strong>
+            <span>Based In</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="content-section">
+        <p class="section__text__p1">Get To Know More</p>
+        <h2 class="title">About Me</h2>
+
+        <div class="about-layout">
+          <div class="premium-card summary-card">
+            <h3>Professional Summary</h3>
+            <p>
+              Hospitality professional with three seasons of experience in the United States
+              resort industry, including roles as Busser, Food Runner, and Server at
+              The Otesaga Resort Hotel in Cooperstown, New York. Experienced in fast-paced
+              dining service, guest relations, teamwork, and maintaining high service standards.
+            </p>
+            <p>
+              Graduate of the Faculty of Electrical Engineering and Computer Science, specialized
+              in Computer Engineering, with strong communication, organization, and problem-solving
+              skills that support excellent performance in hospitality environments.
+            </p>
+          </div>
+
+          <div class="about-highlights">
+            <div class="mini-card">
+              <span class="mini-icon">🏨</span>
+              <h3>Experience</h3>
+              <p>3 Seasons<br />Hospitality & Guest Service</p>
+            </div>
+            <div class="mini-card">
+              <span class="mini-icon">🎓</span>
+              <h3>Education</h3>
+              <p>Bachelor's Degree<br />Computer Engineering</p>
+            </div>
+            <div class="mini-card">
+              <span class="mini-icon">🌍</span>
+              <h3>Languages</h3>
+              <p>Romanian Native<br />English B2</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="content-section">
+        <p class="section__text__p1">My Strengths</p>
+        <h2 class="title">Hospitality Skills</h2>
+
+        <div class="skills-grid">
+          <div class="skill-card featured">
+            <h3>Guest Service</h3>
+            <p>Attentive, calm, and professional service focused on guest satisfaction.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Table Service</h3>
+            <p>Experience supporting and serving guests in resort dining environments.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Food Running</h3>
+            <p>Fast and accurate delivery while maintaining presentation standards.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Teamwork</h3>
+            <p>Strong collaboration with kitchen and front-of-house teams.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Communication</h3>
+            <p>Clear, respectful communication with guests and coworkers.</p>
+          </div>
+          <div class="skill-card">
+            <h3>Time Management</h3>
+            <p>Reliable performance during busy shifts and high-volume service.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="content-section">
+        <p class="section__text__p1">Professional Background</p>
+        <h2 class="title">Work Experience</h2>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3>Server</h3>
+                  <p>The Otesaga Resort Hotel | Cooperstown, New York</p>
+                </div>
+                <span>June 2026 – November 2026</span>
+              </div>
+              <ul>
+                <li>Provide professional and attentive table service in a resort dining environment.</li>
+                <li>Manage guest needs with a positive, calm, and service-oriented attitude.</li>
+                <li>Collaborate with kitchen and front-of-house teams to ensure smooth operations.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3>Busser / Food Runner</h3>
+                  <p>The Otesaga Resort Hotel | Cooperstown, New York</p>
+                </div>
+                <span>June 2025 – October 2025</span>
+              </div>
+              <ul>
+                <li>Supported servers during busy service periods and helped maintain dining room flow.</li>
+                <li>Delivered food accurately and efficiently while following presentation standards.</li>
+                <li>Maintained clean, organized, and welcoming dining areas for guests.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3>Busser / Food Runner</h3>
+                  <p>The Otesaga Resort Hotel | Cooperstown, New York</p>
+                </div>
+                <span>June 2024 – October 2024</span>
+              </div>
+              <ul>
+                <li>Gained hands-on experience in U.S. hospitality and resort dining service.</li>
+                <li>Assisted with table setup, food delivery, clearing, and guest support.</li>
+                <li>Built strong teamwork and service skills in a multicultural environment.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <div>
+                  <h3>Event Server</h3>
+                  <p>Weddings & Private Events | Romania</p>
+                </div>
+                <span>Seasonal Experience</span>
+              </div>
+              <ul>
+                <li>Provided food and beverage service for weddings and private events.</li>
+                <li>Assisted with setup, guest service, and banquet-style operations.</li>
+                <li>Maintained professional standards during large-scale events.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="education" class="content-section compact-section">
+        <p class="section__text__p1">Academic Background</p>
+        <h2 class="title">Education</h2>
+
+        <div class="premium-card education-card">
+          <span class="card-label">Bachelor's Degree</span>
+          <h3>Computer Engineering</h3>
+          <p>Faculty of Electrical Engineering and Computer Science</p>
+          <p>Suceava, Romania</p>
+          <p>
+            Technical education focused on analytical thinking, organization, attention to detail,
+            and practical problem-solving.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="content-section compact-section">
+        <p class="section__text__p1">Get in Touch</p>
+        <h2 class="title">Contact Me</h2>
+
+        <div class="contact-card">
+          <a href="mailto:andrei.toma18@icloud.com">andrei.toma18@icloud.com</a>
+          <a href="tel:+16076635120">+1 607 663 5120</a>
+          <span>Suceava, Romania</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Copyright &#169; 2026 Andrei Toma. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
