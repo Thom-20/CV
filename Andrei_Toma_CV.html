@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrei Toma | Fine Dining Server</title>
+  <meta name="description" content="Andrei Toma - Fine Dining Server and Luxury Hospitality Professional. H-2B visa holder eligible for in-country extension." />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap');
+
+    :root{
+      --navy:#07111f;
+      --navy2:#0d1b2f;
+      --ink:#101827;
+      --soft:#5d6675;
+      --muted:#7a8493;
+      --paper:#f8f5ee;
+      --white:#fffdf8;
+      --gold:#c8a15a;
+      --gold2:#e6cd91;
+      --line:rgba(10,20,35,.14);
+      --radius:22px;
+      --shadow:0 28px 80px rgba(7,17,31,.13);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;background:#e8e2d8}
+    body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:radial-gradient(circle at 12% 10%,rgba(200,161,90,.22),transparent 28%),linear-gradient(135deg,#f9f6ef,#ede5d8);line-height:1.45}
+    a{color:inherit;text-decoration:none}
+
+    .site-nav{width:min(1120px,calc(100% - 28px));height:68px;margin:20px auto 26px;padding:0 22px;border:1px solid rgba(255,255,255,.7);background:rgba(255,253,248,.74);backdrop-filter:blur(18px);border-radius:999px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 18px 50px rgba(7,17,31,.08);position:sticky;top:14px;z-index:10}
+    .brand{font-weight:900;letter-spacing:-.04em;color:var(--navy);font-size:1.2rem;display:flex;align-items:center;gap:10px}
+    .brand-mark{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--navy),#1a2d48);color:var(--gold2);font-size:.84rem;letter-spacing:.04em;border:1px solid rgba(200,161,90,.45)}
+    .nav-actions{display:flex;gap:10px;align-items:center;font-weight:800;font-size:.88rem;color:#2b3545}
+    .nav-actions a,.nav-actions button{border:1px solid var(--line);background:rgba(255,255,255,.58);border-radius:999px;padding:10px 14px;font:inherit;cursor:pointer;color:inherit}
+    .nav-actions button{background:var(--navy);color:white;border-color:transparent}
+    .nav-actions a:hover,.nav-actions button:hover{transform:translateY(-2px)}
+
+    .resume-wrap{width:min(1120px,calc(100% - 28px));margin:0 auto 50px}
+    .resume{background:var(--white);border-radius:34px;box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:300px 1fr;min-height:930px;border:1px solid rgba(255,255,255,.85)}
+
+    .sidebar{background:linear-gradient(180deg,var(--navy),#0b1729 72%,#07111f);color:#eef3f8;padding:28px 24px;position:relative;overflow:hidden}
+    .sidebar:before{content:"";position:absolute;inset:auto -55px -90px auto;width:240px;height:240px;border-radius:50%;background:rgba(200,161,90,.12);filter:blur(2px)}
+    .photo-frame{width:140px;height:140px;margin:0 auto 20px;border-radius:50%;padding:6px;background:linear-gradient(135deg,#fff,var(--gold2));box-shadow:0 24px 60px rgba(0,0,0,.28)}
+    .photo-frame img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center;display:block;background:#d7d7d7}
+    .side-section{position:relative;padding:14px 0;border-top:1px solid rgba(255,255,255,.18)}
+    .side-section:first-of-type{border-top:0;padding-top:0}
+    .side-title{font-size:.72rem;text-transform:uppercase;letter-spacing:.24em;font-weight:900;color:var(--gold2);margin-bottom:14px}
+    .contact-list,.skill-list,.lang-list{display:grid;gap:11px;list-style:none}
+    .contact-list li{font-size:.88rem;color:#f7f7f7;word-break:break-word}
+    .skill-list li{font-size:.88rem;font-weight:700;display:flex;gap:10px;align-items:flex-start;color:#f4f7fb}
+    .skill-list li:before{content:"✓";color:var(--gold2);font-weight:900;line-height:1.2}
+    .visa-card{background:linear-gradient(135deg,var(--gold2),#c29948);color:#101827;border-radius:20px;padding:20px 18px;box-shadow:0 20px 50px rgba(0,0,0,.24)}
+    .visa-card strong{display:block;font-size:1.24rem;letter-spacing:-.04em;margin-bottom:10px}
+    .visa-card span{display:block;font-weight:900;font-size:.84rem;line-height:1.65}
+    .lang-row{display:flex;justify-content:space-between;gap:18px;font-size:.9rem;color:#f4f7fb}
+    .lang-row strong{color:var(--gold2)}
+    .qr-box{margin-top:15px;padding:13px;border:1px solid rgba(255,255,255,.18);border-radius:18px;background:rgba(255,255,255,.06);font-size:.78rem;color:#cbd5e1;font-weight:700}
+
+    .main{padding:28px 28px 22px;background:linear-gradient(180deg,#fffdf8,#fbf8f1)}
+    .topline{display:flex;justify-content:space-between;gap:24px;align-items:flex-start;margin-bottom:14px}
+    .kicker{font-size:.83rem;text-transform:uppercase;letter-spacing:.25em;font-weight:900;color:#9b7636;line-height:1.45}
+    .season{text-align:right;white-space:nowrap}
+    h1{font-size:clamp(3rem,6.2vw,4.6rem);line-height:.87;letter-spacing:-.085em;color:var(--navy);font-weight:900;margin:4px 0 8px}
+    .role{font-size:1.05rem;color:#9b7636;font-weight:900;text-transform:uppercase;letter-spacing:-.025em;margin-bottom:12px}
+    .summary{font-size:.96rem;color:#374151;max-width:760px;margin-bottom:12px}
+    .pill-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+    .pill{border:1px solid rgba(200,161,90,.35);background:#fbf4e2;color:#8b662d;border-radius:999px;padding:8px 12px;font-weight:900;font-size:.78rem;white-space:nowrap}
+    .divider{height:1px;background:var(--line);margin:0 0 12px}
+    .section{margin-top:12px}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;margin-bottom:11px}
+    .section-label{font-size:.83rem;text-transform:uppercase;letter-spacing:.24em;font-weight:900;color:#9b7636}
+    .section h2{font-size:1.42rem;letter-spacing:-.05em;color:var(--navy)}
+    .strengths{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+    .strength-card{border:1px solid var(--line);border-radius:16px;padding:11px 12px;background:white;min-height:70px}
+    .strength-card strong{display:block;font-size:1.25rem;color:var(--navy);margin-bottom:8px;letter-spacing:-.05em}
+    .strength-card span{font-size:.83rem;color:#697386;font-weight:800;line-height:1.55}
+    .exp-grid{display:grid;gap:7px}
+    .job{border:1px solid var(--line);background:white;border-radius:18px;padding:10px 12px;position:relative;overflow:hidden}
+    .job.featured{border-left:6px solid var(--gold)}
+    .job-top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:6px}
+    .job h3{font-size:1.12rem;color:var(--navy);letter-spacing:-.035em}
+    .company{font-weight:900;color:#697386;font-size:.86rem;margin-top:2px}
+    .date{background:#f7f1e4;color:#8b662d;border-radius:999px;padding:7px 10px;font-weight:900;font-size:.72rem;white-space:nowrap}
+    .job ul{padding-left:18px;display:grid;gap:3px}
+    .job li{font-size:.84rem;color:#374151;line-height:1.38}
+    .two-jobs{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .skills-panel{background:linear-gradient(135deg,var(--navy),#172943);border-radius:18px;padding:12px;color:white;margin-top:8px}
+    .skills-panel h2{color:white;font-size:1.28rem;margin-bottom:12px}
+    .chips{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.08);border-radius:999px;padding:8px 10px;font-size:.78rem;font-weight:900;color:#f8fafc}
+    .edu{border:1px solid var(--line);background:white;border-radius:18px;padding:10px 12px;margin-top:6px}
+    .edu strong{display:block;color:var(--navy);font-size:.94rem;margin-bottom:6px}
+    .edu p{color:#4b5563;font-size:.88rem;line-height:1.55}
+
+    @media(max-width:900px){
+      .resume{grid-template-columns:1fr}
+      .sidebar{display:grid;grid-template-columns:220px 1fr;gap:16px;align-items:start}
+      .photo-frame{margin:0 auto}.side-section{padding:15px 0}.main{padding:26px}.topline{display:block}.season{text-align:left;margin-top:8px}.two-jobs,.strengths{grid-template-columns:1fr}.nav-actions a{display:none}
+    }
+    @media(max-width:560px){
+      .site-nav{height:auto;border-radius:22px;align-items:flex-start}.nav-actions{flex-wrap:wrap;justify-content:flex-end}.resume-wrap{width:100%;margin:0}.resume{border-radius:0}.sidebar{grid-template-columns:1fr}.photo-frame{width:150px;height:150px}h1{font-size:3rem}.main{padding:24px 18px}.role{font-size:.98rem}.summary{font-size:.95rem}.job-top{display:block}.date{display:inline-flex;margin-top:8px}.resume-wrap{width:100%}
+    }
+
+    @page{size:A4;margin:0}
+    @media print{
+      *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important;box-sizing:border-box!important}
+      html,body{width:210mm!important;height:297mm!important;margin:0!important;padding:0!important;background:#fff!important;overflow:hidden!important}
+      body{position:relative!important}
+      .site-nav{display:none!important}
+
+      .resume-wrap{
+        position:fixed!important;
+        top:0!important;
+        left:0!important;
+        width:210mm!important;
+        height:297mm!important;
+        margin:0!important;
+        padding:0!important;
+        overflow:hidden!important;
+        background:#fffdf8!important;
+        page-break-after:avoid!important;
+        break-after:avoid!important;
+      }
+
+      .resume{
+        width:210mm!important;
+        height:297mm!important;
+        min-height:297mm!important;
+        border-radius:0!important;
+        box-shadow:none!important;
+        border:0!important;
+        display:grid!important;
+        grid-template-columns:62mm 148mm!important;
+        overflow:hidden!important;
+        background:#fffdf8!important;
+        page-break-inside:avoid!important;
+        break-inside:avoid!important;
+      }
+
+      .sidebar{
+        display:block!important;
+        width:62mm!important;
+        height:297mm!important;
+        padding:8mm 6.2mm!important;
+        background:linear-gradient(180deg,var(--navy),#0b1729 72%,#07111f)!important;
+        color:#eef3f8!important;
+        overflow:hidden!important;
+      }
+      .sidebar:before{width:56mm!important;height:56mm!important;right:-13mm!important;bottom:-18mm!important}
+
+      .main{
+        width:148mm!important;
+        height:297mm!important;
+        padding:8.4mm 7.2mm 5mm!important;
+        background:linear-gradient(180deg,#fffdf8,#fbf8f1)!important;
+        overflow:hidden!important;
+      }
+
+      .photo-frame{width:39mm!important;height:39mm!important;margin:0 auto 6.5mm!important;padding:1.4mm!important;box-shadow:none!important}
+      .side-section{padding:4.6mm 0!important;border-top:1px solid rgba(255,255,255,.18)!important}
+      .side-title{font-size:9.4px!important;line-height:1.1!important;letter-spacing:.23em!important;margin-bottom:2.5mm!important;color:var(--gold2)!important}
+      .contact-list,.skill-list,.lang-list{gap:2.25mm!important}
+      .contact-list li,.skill-list li,.lang-row{font-size:10px!important;line-height:1.3!important;color:#f4f7fb!important}
+      .skill-list li{gap:1.8mm!important}
+      .visa-card{padding:4.8mm 4.2mm!important;border-radius:5mm!important}
+      .visa-card strong{font-size:14.6px!important;line-height:1.05!important;margin-bottom:2mm!important}
+      .visa-card span{font-size:9.6px!important;line-height:1.42!important}
+      .qr-box{display:none!important}
+
+      .topline{margin-bottom:4.4mm!important;gap:4mm!important}
+      .kicker,.season{font-size:9.2px!important;line-height:1.1!important;letter-spacing:.23em!important;color:#9b7636!important}
+      h1{font-size:47px!important;line-height:.86!important;letter-spacing:-.04em!important;word-spacing:.30em!important;margin:0 0 2mm!important;color:var(--navy)!important}
+      .role{font-size:13px!important;line-height:1.12!important;margin-bottom:3.6mm!important;color:#9b7636!important}
+      .summary{font-size:10.95px!important;line-height:1.36!important;margin-bottom:3.8mm!important;color:#374151!important;max-width:none!important}
+      .pill-row{gap:1.9mm!important;margin-bottom:3.8mm!important}
+      .pill{font-size:8.7px!important;line-height:1!important;padding:1.65mm 2.4mm!important;border-radius:999px!important}
+      .divider{margin:0 0 3.4mm!important;height:1px!important}
+      .section{margin-top:3.5mm!important}
+      .section-head{margin-bottom:2.1mm!important}
+      .section-label{font-size:9.4px!important;line-height:1.1!important;letter-spacing:.24em!important}
+      .section h2{font-size:17.2px!important;line-height:1.05!important;letter-spacing:-.04em!important}
+
+      .strengths{grid-template-columns:repeat(3,1fr)!important;gap:2.25mm!important;margin-bottom:3.4mm!important}
+      .strength-card{padding:3.3mm!important;border-radius:3.5mm!important;min-height:15mm!important}
+      .strength-card strong{font-size:15.5px!important;line-height:1.05!important;margin-bottom:1.5mm!important}
+      .strength-card span{font-size:8.8px!important;line-height:1.3!important}
+
+      .exp-grid{gap:2.15mm!important}
+      .job{padding:3.05mm 3.55mm!important;border-radius:3.6mm!important}
+      .job.featured{border-left:1.5mm solid var(--gold)!important}
+      .job-top{gap:2.6mm!important;margin-bottom:1.25mm!important}
+      .job h3{font-size:12.9px!important;line-height:1.08!important}
+      .company{font-size:9.1px!important;line-height:1.25!important;margin-top:.4mm!important}
+      .date{font-size:7.8px!important;line-height:1!important;padding:1.15mm 1.9mm!important;border-radius:999px!important}
+      .job ul{padding-left:3.8mm!important;gap:.25mm!important}
+      .job li{font-size:8.7px!important;line-height:1.24!important}
+      .two-jobs{grid-template-columns:1fr 1fr!important;gap:2.1mm!important}
+
+      .skills-panel{padding:3.9mm!important;border-radius:3.7mm!important;margin-top:2.8mm!important}
+      .skills-panel h2{font-size:14.2px!important;line-height:1.05!important;margin-bottom:2.3mm!important}
+      .chips{gap:1.75mm!important}
+      .chip{font-size:8.4px!important;line-height:1!important;padding:1.45mm 2.1mm!important;border-radius:999px!important}
+
+      .edu{padding:3.8mm!important;margin-top:2.5mm!important;border-radius:3.6mm!important}
+      .edu strong{font-size:10.2px!important;margin-bottom:1.15mm!important;line-height:1.15!important}
+      .edu p{font-size:8.7px!important;line-height:1.28!important;margin:0!important}
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a class="brand" href="#top"><span class="brand-mark">AT</span><span>Andrei Toma</span></a>
+    <div class="nav-actions">
+      <a href="mailto:andrei.toma18@icloud.com">Email</a>
+      <a href="tel:+16076635120">Call</a>
+      <button onclick="window.print()">Print / Save PDF</button>
+    </div>
+  </nav>
+
+  <main id="top" class="resume-wrap">
+    <article class="resume">
+      <aside class="sidebar">
+        <div>
+          <div class="photo-frame"><img src="assets/me.jpeg" alt="Andrei Toma profile photo" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=&quot;width:100%;height:100%;border-radius:50%;display:grid;place-items:center;background:#14243a;color:#e6cd91;font-weight:900;font-size:34px;&quot;>AT</div>'" /></div>
+        </div>
+
+        <div>
+          <section class="side-section">
+            <h2 class="side-title">Contact</h2>
+            <ul class="contact-list">
+              <li>+1 607 663 5120</li>
+              <li>andrei.toma18@icloud.com</li>
+              <li>New York, USA</li>
+              <li>Available for relocation</li>
+            </ul>
+          </section>
+
+          <section class="side-section">
+            <h2 class="side-title">Visa Status</h2>
+            <div class="visa-card">
+              <strong>H-2B Visa Holder</strong>
+              <span>Eligible for in-country extension / transfer</span>
+            </div>
+          </section>
+
+          <section class="side-section">
+            <h2 class="side-title">Core Skills</h2>
+            <ul class="skill-list">
+              <li>Fine Dining Service</li>
+              <li>Guest Relations</li>
+              <li>Food Running</li>
+              <li>Banquet & Event Service</li>
+              <li>Team Collaboration</li>
+              <li>High-Volume Service</li>
+              <li>Cleanliness Standards</li>
+              <li>Time Management</li>
+            </ul>
+          </section>
+
+          <section class="side-section">
+            <h2 class="side-title">Languages</h2>
+            <div class="lang-list">
+              <div class="lang-row"><span>Romanian</span><strong>Native</strong></div>
+              <div class="lang-row"><span>English</span><strong>C1</strong></div>
+            </div>
+            <div class="qr-box">Online resume: thom-20.github.io/CV/</div>
+          </section>
+        </div>
+      </aside>
+
+      <section class="main">
+        <header>
+          <div class="topline">
+            <p class="kicker">Luxury Resort Hospitality</p>
+            <p class="kicker season">Winter Season 2026–2027</p>
+          </div>
+          <h1>ANDREI TOMA</h1>
+          <p class="role">Fine Dining Server | Guest Experience Professional</p>
+          <p class="summary">Hospitality professional with three successful seasons in U.S. resort hospitality at The Otesaga Resort Hotel in Cooperstown, New York. Experienced as Server, Food Runner, Busser, and Event Server, with a calm, polished, guest-focused approach in fast-paced dining environments.</p>
+          <div class="pill-row">
+            <span class="pill">3 U.S. Resort Seasons</span>
+            <span class="pill">Server Experience</span>
+            <span class="pill">H-2B Extension Ready</span>
+            <span class="pill">Available Winter 2026–2027</span>
+          </div>
+        </header>
+
+        <div class="divider"></div>
+
+        <section class="section">
+          <div class="section-head"><div><p class="section-label">Professional Value</p><h2>Key Strengths</h2></div></div>
+          <div class="strengths">
+            <div class="strength-card"><strong>3</strong><span>consecutive seasons in U.S. hospitality</span></div>
+            <div class="strength-card"><strong>2024–2026</strong><span>resort dining experience in New York</span></div>
+            <div class="strength-card"><strong>Server</strong><span>target role for winter hospitality season</span></div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><div><p class="section-label">Professional Background</p><h2>Experience</h2></div></div>
+          <div class="exp-grid">
+            <article class="job featured">
+              <div class="job-top"><div><h3>Server</h3><p class="company">The Otesaga Resort Hotel | Cooperstown, New York</p></div><span class="date">Jun 2026 – Nov 2026</span></div>
+              <ul>
+                <li>Delivered professional and attentive table service in a high-volume resort environment.</li>
+                <li>Managed guest requests with a calm, positive, and service-oriented attitude.</li>
+                <li>Coordinated with kitchen and front-of-house teams to ensure smooth service.</li>
+                <li>Maintained high hospitality, cleanliness, and presentation standards.</li>
+              </ul>
+            </article>
+
+            <article class="job">
+              <div class="job-top"><div><h3>Food Runner / Server</h3><p class="company">The Otesaga Resort Hotel | Cooperstown, New York</p></div><span class="date">Jun 2025 – Oct 2025</span></div>
+              <ul>
+                <li>Supported servers during busy dining periods and helped maintain restaurant flow.</li>
+                <li>Delivered food accurately and efficiently while following presentation standards.</li>
+                <li>Maintained clean, organized, and welcoming dining areas for guests.</li>
+              </ul>
+            </article>
+
+            <div class="two-jobs">
+              <article class="job">
+                <div class="job-top"><div><h3>Busser / Food Runner</h3><p class="company">The Otesaga Resort Hotel</p></div></div>
+                <span class="date">Jun 2024 – Oct 2024</span>
+                <ul>
+                  <li>Assisted with table setup, food delivery, clearing, and guest support.</li>
+                  <li>Built strong teamwork and service skills in a multicultural environment.</li>
+                </ul>
+              </article>
+
+              <article class="job">
+                <div class="job-top"><div><h3>Event Server</h3><p class="company">Weddings & Private Events | Romania</p></div></div>
+                <span class="date">Seasonal</span>
+                <ul>
+                  <li>Provided food and beverage service for weddings and private events.</li>
+                  <li>Assisted with setup, guest service, and banquet-style operations.</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="skills-panel">
+          <h2>Hospitality Skills</h2>
+          <div class="chips">
+            <span class="chip">Guest Service Excellence</span>
+            <span class="chip">Table Service</span>
+            <span class="chip">Food Running</span>
+            <span class="chip">Banquet Service</span>
+            <span class="chip">Communication</span>
+            <span class="chip">Teamwork</span>
+            <span class="chip">Reliability</span>
+            <span class="chip">Problem Solving</span>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-head"><div><p class="section-label">Academic Background</p><h2>Education</h2></div></div>
+          <div class="edu">
+            <strong>Bachelor's Degree — Computer Engineering</strong>
+            <p><b>Faculty of Electrical Engineering and Computer Science</b> | Suceava, Romania</p>
+            <p>Technical education focused on analytical thinking, organization, attention to detail, and practical problem-solving.</p>
+          </div>
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
